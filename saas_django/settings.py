@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+    'accounts',
 ]
+
+AUTH_USER_MODEL = 'accounts.User' # substituímos o modelo User padrão e usamos o nosso próprio, definindo AUTH_USER_MODEL para accounts.User.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -50,6 +55,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'saas_django.urls'
+
+LOGIN_REDIRECT_URL = '/apí/v1/accounts/users'
 
 TEMPLATES = [
     {
