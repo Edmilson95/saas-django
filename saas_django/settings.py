@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'accounts',
+
+    'user_messages',
 ]
 
 AUTH_USER_MODEL = 'accounts.User' # substituímos o modelo User padrão e usamos o nosso próprio, definindo AUTH_USER_MODEL para accounts.User.
